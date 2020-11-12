@@ -9,7 +9,7 @@ install: release
 	$(INSTALL)    -d ${DESTDIR}/${PREFIX}/bin
 	$(INSTALL) -s -t ${DESTDIR}/${PREFIX}/bin target/release/${TARGET}
 release:
-	cargo build --release
+	cargo build --release --locked
 
 
 .PHONY: release install
